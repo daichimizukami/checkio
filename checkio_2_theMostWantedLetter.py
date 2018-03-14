@@ -1,15 +1,38 @@
 from collections import Counter
+import re
 
 def checkio(text):
 
-    mwl = Counter(text) #1.配列系の数え上げ
-    list = []
+    #1.文字列操作(データ加工)
+    str = text.lower()
+    str2 = str.replace(" ", "") #空白を削除
+    str3 = re.sub(r'[!-/:-@[-`{-~]', "", str2) #ASCIIの記号を削除
+    str4 = re.sub(r'[0-9]', "", str3)
+    print(str4)
+    
+    #2.各文字数をカウント
+    mwl = Counter(str4)
     print(mwl)
     
-    for key,value in mwl.most_common(): #2.頻出回数が多い順に格納（順不同）
-        list.append(key)
+    #3.文字数が最大のアルファベットのみ格納
+    list = []
+    cnt = 0    
+
+    for key,value in mwl.most_common(): 
+        if cnt <= value:
+            list.append(key)
+            cnt = value
+        else:
+            break
+    print(list)
+    
+    #4.アルファベット順にソート 
+    list.sort()
+    print(list)
+
     return list[0]
 
+#Lorem ipsum dolor sit amet
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio("Hello World!") == "l", "Hello test"
@@ -22,25 +45,20 @@ if __name__ == '__main__':
     assert checkio("a" * 9000 + "b" * 1000) == "a", "Long."
     print("The local tests are done.")
 
-
 """
 ■アルゴリズム
-1.出現回数を調べる
-2.多い順に配列に格納する
-3.一番多いものを出力
-→できたら例外を付け足して行く
-
-・大文字小文字変換
-・並び替え
-・半角削除
+コメントの#1-4を参照
 
 ■学習したこと
-・モジュール collections.Counter
-
-■参考リンク
-・https://www.sejuku.net/blog/28832
+・collectionsライブラリ　Counter(),most_common()
+https://www.sejuku.net/blog/28832
+・文字列置換 replace() re.sub()
+http://uxmilk.jp/8662
+・文字列のソート sort()
+https://www.pythonweb.jp/tutorial/list/index11.html
 
 ■Next
-
+・データ加工のstr1-4を１つにまとめたい。
+・文字列操作のパターン学習
 
 """
