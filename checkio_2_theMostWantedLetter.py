@@ -61,5 +61,7 @@ https://www.pythonweb.jp/tutorial/list/index11.html
 ■Next
 ・データ加工のstr1-4を１つにまとめたい。
 ・文字列操作のパターン学習
+・lambda式の書き方
+https://www.sejuku.net/blog/23677
 
 """
