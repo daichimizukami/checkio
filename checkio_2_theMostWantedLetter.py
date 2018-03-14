@@ -4,10 +4,10 @@ import re
 def checkio(text):
 
     #1.文字列操作(データ加工)
-    str = text.lower()
+    str = text.lower() #大文字から小文字
     str2 = str.replace(" ", "") #空白を削除
-    str3 = re.sub(r'[!-/:-@[-`{-~]', "", str2) #ASCIIの記号を削除
-    str4 = re.sub(r'[0-9]', "", str3)
+    str3 = re.sub(r'[!-/:-@[-`{-~]', "", str2) #ASCII記号を削除
+    str4 = re.sub(r'[0-9]', "", str3) #数字を削除
     print(str4)
     
     #2.各文字数をカウント
@@ -52,9 +52,10 @@ if __name__ == '__main__':
 ■学習したこと
 ・collectionsライブラリ　Counter(),most_common()
 https://www.sejuku.net/blog/28832
-・文字列置換 replace() re.sub()
+
+・文字列置換 replace() re.sub() lower()/upper()
 http://uxmilk.jp/8662
-・文字列のソート sort()
+・文字列ソート sort()
 https://www.pythonweb.jp/tutorial/list/index11.html
 
 ■Next
