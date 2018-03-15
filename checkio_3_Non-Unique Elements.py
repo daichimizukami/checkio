@@ -4,7 +4,7 @@ def checkio(data):
     list_cnt = []
             
     for n in list:
-        if list.count(n) >= 2:
+        if list.count(n) > 1:
             list_cnt.append(n)
         else:
             continue
