@@ -44,24 +44,3 @@ if __name__ == '__main__':
     print("Start the long test")
     assert checkio("a" * 9000 + "b" * 1000) == "a", "Long."
     print("The local tests are done.")
-
-"""
-■アルゴリズム
-コメントの#1-4を参照
-
-■学習したこと
-・collectionsライブラリ　Counter(),most_common()
-https://www.sejuku.net/blog/28832
-
-・文字列置換 replace() re.sub() lower()/upper()
-http://uxmilk.jp/8662
-・文字列ソート sort()
-https://www.pythonweb.jp/tutorial/list/index11.html
-
-■Next
-・データ加工のstr1-4を１つにまとめたい。
-・文字列操作のパターン学習
-・lambda式の書き方
-https://www.sejuku.net/blog/23677
-
-"""

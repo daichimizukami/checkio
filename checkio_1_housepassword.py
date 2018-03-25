@@ -18,19 +18,3 @@ if __name__ == '__main__':
     assert checkio('123456123456') == False, "5th example"
     assert checkio('QwErTy911poqqqq') == True, "6th example"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-
-"""
-■学習したこと
-・Pythonで正規表現を扱いたいときは，「re」モジュールを用いることが一般的
-・その中にxxが含まれるか否かはsearch()メソッドを利用。その他,match()なども可
-・注意：re.search は最初にマッチした文字列の情報しか取得できない
-
-■参考リンク
-・Pythonの正規表現の基本的な使い方:http://uxmilk.jp/41416
-・サンプル集：http://www.megasoft.co.jp/mifes/seiki/meta.html
-■Next
-・re.match()の使い方
-・re.search(r[],data)のrは何か調べる
-・正規表現の基礎を学ぶ
-
-"""

@@ -24,19 +24,3 @@ if __name__ == "__main__":
     assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5], "3rd example"
     assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9], "4th example"
     print("It is all good. Let's check it now")
-
-"""
-■アルゴリズム
-・forで頭から１つづつ値を取得
-・取得した値が重複してれば新規の配列に格納する
-
-■学習したこと
-・list.count("A") => Aが何個リストにあるか出力
-https://www.pythonweb.jp/tutorial/list/index10.html
-・set() 配列の重複項目を削除
-li_uniq = set(data)
-
-■Next
-・内包表記とは？
-
-"""

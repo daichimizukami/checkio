@@ -18,24 +18,3 @@ if __name__ == '__main__':
     assert count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                        {"sum", "hamlet", "infinity", "anything"}) == 1, "Weird text"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-
-
-"""
-■アルゴリズム
-・words回数分、textの中にwordが含まれているか確認
-・含まれてたらカウントアップ
-
-■学習したこと
-・要素の確認(in演算子, indexメソッド, countメソッド)
-A in B = True/Flase
-https://www.pythonweb.jp/tutorial/list/index10.html
-
-・forのpass,continueの違い
-continueは続く命令を実行せず、次のループへ突入する。
-http://code.i-harness.com/ja/q/90b6cb
-
-■Next
-・形態素解析
-https://qiita.com/pika_shi/items/94df1d8f47ef82cf39c8
-
-"""
